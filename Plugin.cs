@@ -91,12 +91,12 @@ Lobby
                 archiveMessage = "";
                 shouldPlayTaps = false;
             }
-            //bool keyFlag = UnityInput.Current.GetKey(KeyCode.Z);
-            //if (keyFlag && !lastInsert)
-            //{
-            //    uiIsVisible = !uiIsVisible;
-            //}
-            //lastInsert = keyFlag;
+            bool keyFlag = UnityInput.Current.GetKey(KeyCode.Z);
+            if (keyFlag && !lastInsert)
+            {
+                uiIsVisible = !uiIsVisible;
+            }
+            lastInsert = keyFlag;
 
             try
             {
