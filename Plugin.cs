@@ -91,12 +91,12 @@ Lobby
                 archiveMessage = "";
                 shouldPlayTaps = false;
             }
-            bool keyFlag = UnityInput.Current.GetKey(KeyCode.Z);
-            if (keyFlag && !lastInsert)
-            {
-                uiIsVisible = !uiIsVisible;
-            }
-            lastInsert = keyFlag;
+            //bool keyFlag = UnityInput.Current.GetKey(KeyCode.Z);
+            //if (keyFlag && !lastInsert)
+            //{
+            //    uiIsVisible = !uiIsVisible;
+            //}
+            //lastInsert = keyFlag;
 
             try
             {
@@ -479,7 +479,7 @@ Lobby
                     VRRig pray = GetVRRigFromPlayer(plr);
                     if (pray != null)
                     {
-                        Dictionary<string, string> cosmetics = new Dictionary<string, string> { { "LBAAD.", "ADMINISTRATOR BADGE" }, { "LBAAK.", "MOD STICK" }, { "LBADE.", "FINGER PAINTER BADGE" }, { "LBAGS.", "ILLUSTRATOR BADGE" } };
+                        Dictionary<string, string> cosmetics = new Dictionary<string, string> { { "LBAAD.", "ADMINISTRATOR BADGE" }, { "LBAAK.", "MOD STICK" }, { "LBADE.", "FINGER PAINTER BADGE" }, { "LBAGS.", "ILLUSTRATOR BADGE" }, { "LMAPY.", "FOREST GUIDE MOD STICK" } };
                         foreach (KeyValuePair<string, string> v in cosmetics)
                         {
                             if (pray.concatStringOfCosmeticsAllowed.Contains(v.Key))
@@ -566,6 +566,8 @@ Lobby
                     return fingerpainter;
                 case "MOD STICK":
                     return mod;
+                case "FOREST GUIDE MOD STICK":
+                    return mod;
                 case "COLD MONKE SWEATER":
                     return sweater;
                 case "ADMINISTRATOR BADGE":
@@ -618,6 +620,10 @@ Lobby
             if (name.Contains("goatgt"))
             {
                 return "https://cdn.discordapp.com/attachments/1222354892132454400/1274203382927593532/IQV6LBeVFKW-6eA01TW6Ke4pJpUgTBj_wZCjflxtnGuJAqyYvSCXFt19pX868g2TOs-jL2Hjs900-c-k-c0x00ffffff-no-rj.png?ex=66c165e0&is=66c01460&hm=fd07dd582fd369db12fedd15f26e5264a2508b4124b68b1d4b01b9d2bcf51999&";
+            }
+            if (name.Contains("decal"))
+            {
+                return "https://cdn.discordapp.com/attachments/1360079410119708786/1360451614317740062/image.png?ex=67fb2acc&is=67f9d94c&hm=0f15554c1f171db6d6473f17a6311707a1ee489bcb37e875818c38618d32a5c7&";
             }
             if (name.Contains("stick"))
             {
